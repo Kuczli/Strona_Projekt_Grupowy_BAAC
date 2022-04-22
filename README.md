@@ -30,6 +30,6 @@ Dostepne serwisy:
  - 166686 -Jaeger UI
 
 ## Uruchomienie
-    ::
+    
       sudo make
       sudo make start 
