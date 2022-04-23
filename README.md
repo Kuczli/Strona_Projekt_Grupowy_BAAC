@@ -37,28 +37,27 @@ Dostepne serwisy:
 
 ## Deployment na Heroku (najważniejsze pliki/komendy)
 
-#podpięcie konta github z heroku
-#zmiana pliku z app.py na main.py
-main.py
-pip install gunicorn
-#tworzenie pliku w projekcie Procfile
-Procfile
-#w pliku:
-web: gunicorn main:app
+     podpięcie konta github z heroku
+     zmiana pliku z app.py na main.py
+     main.py
+     pip install gunicorn
+     tworzenie pliku w projekcie Procfile
+     Procfile
+     w pliku web: gunicorn main:app
 
 ## Deployment na Azure (najważniejsze komendy)
 
-#logowanie
-az login
+     logowanie
+     az login
 
-#tworzenie grupy zasobów
-az group create -n Kasixphotography -l westeurope
+     tworzenie grupy zasobów
+     az group create -n Kasixphotography -l westeurope
 
-#tworzenie plan App Service
-az appservice plan create --name Kasixphotography --resource-group Kasixphotography --sku B1 --is-linux
+     tworzenie plan App Service
+     az appservice plan create --name Kasixphotography --resource-group Kasixphotography --sku B1 --is-linux
 
-#tworzenie nową App Service internetową
-az webapp create --name Kasixphotography --runtime 'PYTHON|3.9' --plan Kasixphotography --resource-group Kasixphotography --query 'defaultHostName' --output table
-```
+     tworzenie nową App Service internetową
+     az webapp create --name Kasixphotography --runtime 'PYTHON|3.9' --plan Kasixphotography --resource-group Kasixphotography --query 'defaultHostName' --output table
+
 
 
